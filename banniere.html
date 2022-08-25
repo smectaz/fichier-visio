@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="style.css" />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="banniere" class="banniere">
+			<div id="test" class="text">
+				<h4>accueil</h4>
+				<p>accueil</p>
+			</div>
+
+			<div>
+				<img
+					id="cercle"
+					class="cercle"
+					src="img/Cercle-Vecteur.png"
+					alt="icone visio-digital"
+				/>
+				<img id="vente" class="vente" src="img/ventes.png" alt="icone vente" />
+				<img
+					id="succes"
+					class="succes"
+					src="img/succes.png"
+					alt="icone succes"
+				/>
+				<img
+					id="partenariat"
+					class="partenariat"
+					src="img/partenariat.png"
+					alt="icone partenariat"
+				/>
+				<img
+					id="collaboration"
+					class="collaboration"
+					src="img/collaboration.png"
+					alt="icone collaboration"
+				/>
+				<img
+					id="formation"
+					class="formation"
+					src="img/formation.png"
+					alt="icone formation"
+				/>
+				<img
+					id="experience"
+					class="experience"
+					src="img/experienceui.png"
+					alt="icone experience-ui"
+				/>
+				<img
+					id="marketing"
+					class="marketing"
+					src="img/marketingdigi.png"
+					alt="icone marketing digital"
+				/>
+				<img
+					id="integration"
+					class="integration"
+					src="img/integration.png"
+					alt="icone integration"
+				/>
+				<img
+					id="statistique"
+					class="statistique"
+					src="img/statistique.png"
+					alt="icone statistique"
+				/>
+				<img
+					id="e-commerce"
+					class="e-commerce"
+					src="img/e-commerce.png"
+					alt="icone e-commerce"
+				/>
+				<img
+					id="socialmedia"
+					class="socialmedia"
+					src="img/socialmedia.png"
+					alt="icone social media"
+				/>
+				<img
+					id="acquisition"
+					class="acquisition"
+					src="img/acquisition.png"
+					alt="icone acquisition"
+				/>
+			</div>
+		</div>
+		<script>
+			function addImageSurvol1(idImg, srcImgOver) {
+				var img = document.getElementById(idImg), // On récupère notre image
+					srcImg = img.src, // On sauvegarde l'url originale de l'image
+					imgOver = new Image(); // On crée un objet Image...
+				imgOver.src = srcImgOver; // ...pour précharger la deuxième image.
+				// Reste plus qu'à ajouter les gestionnaire d'évènements :
+				img.onmouseover = function () {
+					this.src = srcImgOver; //changement de l'image entrée souris
+					document.getElementById("test").innerHTML =
+						"<div id='sortie'><h4>vente</h4><p>ventes</p></div>"; //changement de texte entrée souris
+				};
+				img.onmouseout = function () {
+					this.src = srcImg; //changement de l'image sortie souris
+					document.getElementById("sortie").innerHTML =
+						"<div id='test'><h4>accueil</h4><p>accueil</p>"; //changement de texte sortie souris
+				};
+			}
+
+			function addImageSurvol2(idImg, srcImgOver) {
+				var img = document.getElementById(idImg),
+					srcImg = img.src,
+					imgOver = new Image();
+				imgOver.src = srcImgOver;
+				img.onmouseover = function () {
+					this.src = srcImgOver;
+					document.getElementById("test").innerHTML =
+						"<div id='sortie'><h4>succés</h4><p>succés</p></div>";
+				};
+				img.onmouseout = function () {
+					this.src = srcImg;
+					document.getElementById("sortie").innerHTML =
+						"<div id='test'><h4>accueil</h4><p id='test'>accueil</p></div>";
+				};
+			}
+
+			function addImageSurvol3(idImg, srcImgOver) {
+				var img = document.getElementById(idImg),
+					srcImg = img.src,
+					imgOver = new Image();
+				imgOver.src = srcImgOver;
+				img.onmouseover = function () {
+					this.src = srcImgOver;
+					document.getElementById("test").innerHTML =
+						"<div id='sortie'><h4>partenariat</h4><p>partenariat</p></div>";
+				};
+				img.onmouseout = function () {
+					this.src = srcImg;
+					document.getElementById("sortie").innerHTML =
+						"<div id='test'><h4>accueil</h4><p id='test'>accueil</p></div>";
+				};
+			}
+
+			function addImageSurvol4(idImg, srcImgOver) {
+				var img = document.getElementById(idImg),
+					srcImg = img.src,
+					imgOver = new Image();
+				imgOver.src = srcImgOver;
+				img.onmouseover = function () {
+					this.src = srcImgOver;
+					document.getElementById("test").innerHTML =
+						"<div id='sortie'><h4>collaboration</h4><p>collaboration</p></div>";
+				};
+				img.onmouseout = function () {
+					this.src = srcImg;
+					document.getElementById("sortie").innerHTML =
+						"<div id='test'><h4>accueil</h4><p id='test'>accueil</p></div>";
+				};
+			}
+
+			function addImageSurvol5(idImg, srcImgOver) {
+				var img = document.getElementById(idImg),
+					srcImg = img.src,
+					imgOver = new Image();
+				imgOver.src = srcImgOver;
+				img.onmouseover = function () {
+					this.src = srcImgOver;
+					document.getElementById("test").innerHTML =
+						"<div id='sortie'><h4>formations</h4><p>formations</p></div>";
+				};
+				img.onmouseout = function () {
+					this.src = srcImg;
+					document.getElementById("sortie").innerHTML =
+						"<div id='test'><h4>accueil</h4><p id='test'>accueil</p></div>";
+				};
+			}
+
+			function addImageSurvol6(idImg, srcImgOver) {
+				var img = document.getElementById(idImg),
+					srcImg = img.src,
+					imgOver = new Image();
+				imgOver.src = srcImgOver;
+				img.onmouseover = function () {
+					this.src = srcImgOver;
+					document.getElementById("test").innerHTML =
+						"<div id='sortie'><h4>expériences utilisateurs</h4><p>expériences utilisateurs</p></div>";
+				};
+				img.onmouseout = function () {
+					this.src = srcImg;
+					document.getElementById("sortie").innerHTML =
+						"<div id='test'><h4>accueil</h4><p id='test'>accueil</p></div>";
+				};
+			}
+
+			function addImageSurvol7(idImg, srcImgOver) {
+				var img = document.getElementById(idImg),
+					srcImg = img.src,
+					imgOver = new Image();
+				imgOver.src = srcImgOver;
+				img.onmouseover = function () {
+					this.src = srcImgOver;
+					document.getElementById("test").innerHTML =
+						"<div id='sortie'><h4>marketing digital</h4><p>marketing digital</p></div>";
+				};
+				img.onmouseout = function () {
+					this.src = srcImg;
+					document.getElementById("sortie").innerHTML =
+						"<div id='test'><h4>accueil</h4><p id='test'>accueil</p></div>";
+				};
+			}
+
+			function addImageSurvol8(idImg, srcImgOver) {
+				var img = document.getElementById(idImg),
+					srcImg = img.src,
+					imgOver = new Image();
+				imgOver.src = srcImgOver;
+				img.onmouseover = function () {
+					this.src = srcImgOver;
+					document.getElementById("test").innerHTML =
+						"<div id='sortie'><h4>intégration</h4><p>intégration</p></div>";
+				};
+				img.onmouseout = function () {
+					this.src = srcImg;
+					document.getElementById("sortie").innerHTML =
+						"<div id='test'><h4>accueil</h4><p id='test'>accueil</p></div>";
+				};
+			}
+
+			function addImageSurvol9(idImg, srcImgOver) {
+				var img = document.getElementById(idImg),
+					srcImg = img.src,
+					imgOver = new Image();
+				imgOver.src = srcImgOver;
+				img.onmouseover = function () {
+					this.src = srcImgOver;
+					document.getElementById("test").innerHTML =
+						"<div id='sortie'><h4>statistique</h4><p>statistique</p></div>";
+				};
+				img.onmouseout = function () {
+					this.src = srcImg;
+					document.getElementById("sortie").innerHTML =
+						"<div id='test'><h4>accueil</h4><p id='test'>accueil</p></div>";
+				};
+			}
+
+			function addImageSurvol10(idImg, srcImgOver) {
+				var img = document.getElementById(idImg),
+					srcImg = img.src,
+					imgOver = new Image();
+				imgOver.src = srcImgOver;
+				img.onmouseover = function () {
+					this.src = srcImgOver;
+					document.getElementById("test").innerHTML =
+						"<div id='sortie'><h4>e-commerce</h4><p>e-commerce</p></div>";
+				};
+				img.onmouseout = function () {
+					this.src = srcImg;
+					document.getElementById("sortie").innerHTML =
+						"<div id='test'><h4>accueil</h4><p id='test'>accueil</p></div>";
+				};
+			}
+
+			function addImageSurvol11(idImg, srcImgOver) {
+				var img = document.getElementById(idImg),
+					srcImg = img.src,
+					imgOver = new Image();
+				imgOver.src = srcImgOver;
+				img.onmouseover = function () {
+					this.src = srcImgOver;
+					document.getElementById("test").innerHTML =
+						"<div id='sortie'><h4>social média</h4><p>social média</p></div>";
+				};
+				img.onmouseout = function () {
+					this.src = srcImg;
+					document.getElementById("sortie").innerHTML =
+						"<div id='test'><h4>accueil</h4><p id='test'>accueil</p></div>";
+				};
+			}
+
+			function addImageSurvol12(idImg, srcImgOver) {
+				var img = document.getElementById(idImg),
+					srcImg = img.src,
+					imgOver = new Image();
+				imgOver.src = srcImgOver;
+				img.onmouseover = function () {
+					this.src = srcImgOver;
+					document.getElementById("test").innerHTML =
+						"<div id='sortie'><h4>acquisition client</h4><p>acquisition client</p></div>";
+				};
+				img.onmouseout = function () {
+					this.src = srcImg;
+					document.getElementById("sortie").innerHTML =
+						"<div id='test'><h4>accueil</h4><p id='test'>accueil</p></div>";
+				};
+			}
+
+			function cacheimg() {
+				document.getElementById("imgchargement").style.display = "none";
+				document.getElementById("banniere").style.display = "flex";
+			}
+
+			setTimeout(cacheimg, 5000);
+
+			addImageSurvol1("vente", "img/ventes-n&b.png");
+
+			addImageSurvol2("succes", "img/succes-n&b.png");
+
+			addImageSurvol3("partenariat", "img/partenariat-n&b.png");
+
+			addImageSurvol4("collaboration", "img/collaboration-n&b.png");
+
+			addImageSurvol5("formation", "img/formation-n&b.png");
+
+			addImageSurvol6("experience", "img/experienceui-n&b.png");
+
+			addImageSurvol7("marketing", "img/marketingdigi-n&b.png");
+
+			addImageSurvol8("integration", "img/integration-n&b.png");
+
+			addImageSurvol9("statistique", "img/statistique-n&b.png");
+
+			addImageSurvol10("e-commerce", "img/e-commerce-n&b.png");
+
+			addImageSurvol11("socialmedia", "img/socialmedia-n&b.png");
+
+			addImageSurvol12("acquisition", "img/acquisition-n&b.png");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,145 @@
+.banniere {
+	display: none;
+	justify-content: space-between;
+}
+
+.imgchargement {
+	display: block;
+}
+
+.cercle {
+	width: 400px;
+	height: 400px;
+	margin-right: 20px;
+	margin-top: 40px;
+}
+
+.vente {
+	width: 150px;
+	height: 150px;
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 153px;
+}
+
+.succes {
+	width: 150px;
+	height: 150px;
+	display: block;
+	position: absolute;
+	top: 20px;
+	right: 250px;
+}
+
+.partenariat {
+	width: 150px;
+	height: 150px;
+	display: block;
+	position: absolute;
+	top: 70px;
+	right: 300px;
+}
+
+.collaboration {
+	width: 150px;
+	height: 150px;
+	display: block;
+	position: absolute;
+	top: 175px;
+	right: 320px;
+}
+
+.formation {
+	width: 150px;
+	height: 150px;
+	display: block;
+	position: absolute;
+	top: 260px;
+	right: 305px;
+}
+
+.experience {
+	width: 150px;
+	height: 150px;
+	display: block;
+	position: absolute;
+	top: 340px;
+	right: 245px;
+}
+
+.marketing {
+	width: 150px;
+	height: 150px;
+	display: block;
+	position: absolute;
+	top: 360px;
+	right: 153px;
+}
+
+.integration {
+	width: 150px;
+	height: 150px;
+	display: block;
+	position: absolute;
+	top: 330px;
+	right: 70px;
+}
+
+.statistique {
+	width: 150px;
+	height: 150px;
+	display: block;
+	position: absolute;
+	top: 270px;
+	right: 10px;
+}
+
+.e-commerce {
+	width: 150px;
+	height: 150px;
+	display: block;
+	position: absolute;
+	top: 185px;
+	right: -20px;
+}
+
+.socialmedia {
+	width: 150px;
+	height: 150px;
+	display: block;
+	position: absolute;
+	top: 90px;
+	right: 0px;
+}
+
+.acquisition {
+	width: 150px;
+	height: 150px;
+	display: block;
+	position: absolute;
+	top: 25px;
+	right: 55px;
+}
+
+.imgchargement {
+	padding: 15px;
+	position: absolute;
+	animation-name: animlogo;
+	animation-duration: 5.5s;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes animlogo {
+	from {
+		left: 100px;
+		height: 200px;
+		width: 200px;
+	}
+
+	to {
+		left: 1000px;
+		width: 500px;
+		height: 500px;
+	}
+}
