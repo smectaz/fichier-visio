@@ -1,11 +1,12 @@
+/*css banière étoilée*/
 .banniere {
 	display: none;
 	justify-content: space-between;
 }
 
-.imgchargement {
-	display: block;
-}
+/*.imgchargement {
+	
+}*/
 
 .cercle {
 	width: 400px;
@@ -123,23 +124,63 @@
 }
 
 .imgchargement {
+	display: block;
+	margin: auto;
+	width: 500px;
+	height: 500px;
+	/*background: linear-gradient(135deg, #fad961 0%, #f76b1c 100%);
 	padding: 15px;
 	position: absolute;
 	animation-name: animlogo;
 	animation-duration: 5.5s;
-	animation-timing-function: ease-in-out;
+	animation-fill-mode: backwards;*/
+
+	animation: animlogo 0.8s ease-out;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
 }
 
 @keyframes animlogo {
 	from {
-		left: 100px;
+		box-shadow: 0 0 0 -3px hsla(0, 0%, 100%, 0), 0 0 0 0 hsl(44, 66%, 57%);
+		/*left: 100px;
 		height: 200px;
-		width: 200px;
+		width: 200px;*/
 	}
 
 	to {
-		left: 1000px;
+		box-shadow: 0 0 0 10px hsla(0, 0%, 100%, 0), 0 0 0 13px hsla(0, 0%, 100%, 0);
+		/*left: 1000px;
 		width: 500px;
-		height: 500px;
+		height: 500px;*/
 	}
+}
+
+/*css photo pourcentage*/
+
+.photo {
+	background-image: url(img/Home-Page.jpg);
+}
+
+.logo {
+	height: 80px;
+	width: 80px !important;
+	position: absolute;
+	right: 50px;
+	top: 10px;
+}
+
+.texte {
+	color: #f9f9f9;
+	font-size: 28px;
+	font-family: poppins;
+}
+
+.pligne {
+	border-bottom: 1px solid #facb61;
+}
+
+.gligne {
+	border-bottom: 5px solid #facb61;
+	padding-bottom: 5px;
 }

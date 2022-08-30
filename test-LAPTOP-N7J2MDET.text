@@ -1,0 +1,91 @@
+
+lien connexion
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13837 tc-menu-item tc-menu-depth-0 tc-menu-layout-default last-menu-item"><a href="https://www.visio-digital.com/inscription/" class="tc-menu-inner">Connexion</a></li>
+
+
+https://www.visio-digital.com/deconnexion/?redirect_to=https://www.visio-digital.com
+
+if ( is_user_logged_in() ) 
+{?>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13837 tc-menu-item tc-menu-depth-0 tc-menu-layout-default last-menu-item"><a href="https://www.visio-digital.com/deconnexion/?redirect_to=https://www.visio-digital.com" class="tc-menu-inner">Déconnexion</a></li>
+<?php } else { ?>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13837 tc-menu-item tc-menu-depth-0 tc-menu-layout-default last-menu-item"><a href="https://www.visio-digital.com/inscription/" class="tc-menu-inner">Connexion</a></li>
+<?php }
+
+
+image profil team
+
+<?php echo thim_get_feature_image( get_post_thumbnail_id(), 'full', 200, 200 ); ?>
+
+<a class="link-img" href="https://www.visio-digital.com/inscription"
+
+
+class="job_listings" style="margin-top:10px; list-style:none; display:flex; flex-direction:column;"
+
+class="job_listings" style="margin-top:15px;margin-left:250px; margin-right:250px; border: #facb61 solid 3px; padding:15px; text-align:center; background-color:#f9f9f9
+
+
+resultat
+
+<div class="course-results-progress">
+	<?php do_action( 'learn-press/user-item-progress', $course_results, $course_data, $user, $course ); ?>
+
+	<div class="course-progress">
+		<?php
+		$heading = apply_filters( 'learn-press/course/result-heading', __( 'Course results', 'eduma' ) );
+		if ( false !== $heading ) {
+			?>
+			<label class="lp-course-progress-heading"><?php echo $heading; ?>
+				<span class="value result"><b class="number">
+						<?php echo round( $course_results['result'], 2 ); ?></b>%
+				</span>
+			</label>
+		<?php } ?>
+		<div class="learn-press-progress lp-course-progress <?php echo $course_data->is_passed() ? ' passed' : ''; ?>"
+			 data-value="<?php echo $course_results['result']; ?>"
+			 data-passing-condition="<?php echo $passing_condition; ?>"
+			 title="<?php echo esc_attr( learn_press_translate_course_result_required( $course ) ); ?>">
+			<div class="progress-bg">
+				<div class="progress-active lp-progress-value" style="left: <?php echo $course_results['result']; ?>%;">
+				</div>
+			</div>
+			<div class="lp-passing-conditional"
+				 data-content="<?php printf( esc_html__( 'Passing condition: %s%%', 'learnpress' ), $passing_condition ); ?>"
+				 style="left: <?php echo $passing_condition; ?>%;">
+			</div>
+		</div>
+	 </div>
+	<div class="<?php echo implode( ' ', $classes ); ?>"><?php learn_press_course_grade_html( $graduation ); ?></div>
+</div>
+
+
+function blockAccess($page, $role){ 
+
+$userId = get_current_user_id(); 
+
+$url = get_permalink(); 
+
+$urlProfil = $url.$userId; 
+
+$verif = $page.$userId; 
+
+if ($url === $page){  
+
+if ($verif !== $urlProfil && wp_get_current_user()->roles[0] === $role){ 
+
+wp_redirect( 'https://www.visio-digital.com/recrutement-digital/' ); 
+
+} 
+
+} 
+
+} 
+
+ 
+
+<?php  
+
+blockAccess("https://www.visio-digital.com/profil-candidat/","um_entreprise"); 
+
+?> 
