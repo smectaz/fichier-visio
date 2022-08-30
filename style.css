@@ -158,10 +158,11 @@
 
 /*css photo pourcentage*/
 
+/*fond photo*/
 .photo {
 	background-image: url(img/Home-Page.jpg);
 }
-
+/*positionnement du logo*/
 .logo {
 	height: 80px;
 	width: 80px !important;
@@ -169,18 +170,59 @@
 	right: 50px;
 	top: 10px;
 }
-
+/*css entete*/
 .texte {
 	color: #f9f9f9;
 	font-size: 28px;
 	font-family: poppins;
+	font-weight: 600;
 }
-
+/*tiret de diverse épaisseurs*/
 .pligne {
 	border-bottom: 1px solid #facb61;
 }
 
 .gligne {
+	border-bottom: 10px solid #facb61;
+	padding-bottom: 5px;
+}
+
+.mligne {
 	border-bottom: 5px solid #facb61;
 	padding-bottom: 5px;
+}
+/*etend le tiret pour texte court*/
+.padding {
+	padding-right: 20px;
+}
+
+/*marge différente*/
+.margecorp {
+	margin-top: 40px;
+}
+.marge-right {
+	margin-right: 100px !important;
+}
+
+.marge-espace-texte {
+	margin-bottom: 70px;
+}
+
+.padding-texte {
+	padding-bottom: 50px;
+}
+
+/*css du texte principal*/
+.coltitre {
+	color: #facb61;
+	font-size: 30px;
+	font-family: poppins;
+	font-weight: 900;
+}
+
+.phrase {
+	color: #f9f9f9;
+	font-size: 19px;
+	font-family: poppins;
+	text-transform: uppercase;
 }
