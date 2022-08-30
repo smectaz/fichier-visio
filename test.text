@@ -58,3 +58,33 @@ resultat
 	 </div>
 	<div class="<?php echo implode( ' ', $classes ); ?>"><?php learn_press_course_grade_html( $graduation ); ?></div>
 </div>
+
+function blockAccess($page, $role){ 
+
+$userId = get_current_user_id(); 
+
+$url = get_permalink(); 
+
+$urlProfil = $url.$userId; 
+
+$verif = $page.$userId; 
+
+if ($url === $page){  
+
+if ($verif !== $urlProfil && wp_get_current_user()->roles[0] === $role){ 
+
+wp_redirect( 'https://www.visio-digital.com/recrutement-digital/' ); 
+
+} 
+
+} 
+
+} 
+
+ 
+
+<?php  
+
+blockAccess("https://www.visio-digital.com/profil-candidat/","um_entreprise"); 
+
+?> 
