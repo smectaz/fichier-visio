@@ -1,12 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<link rel="stylesheet" href="style.css" />
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 	</head>
 	<body>
-		<div class="imgtexte"></div>
+		<div id="img-charge-acqui">
+			<img
+				src="img/ban-acqui/cercle&icone.png"
+				alt="charge accueil"
+				class="img-charge-acqui"
+			/>
+		</div>
+		<div class="corp" id="corp">
+			<div id="imgtexte">
+				<img class="imgtexte" src="img/ban-acqui/texte-acqui.png" alt="" />
+			</div>
+			<div>
+				<img
+					class="etoile"
+					id="etoile"
+					src="img/ban-acqui/cercle-vide.png"
+					alt=""
+				/>
+				<img
+					class="acqui"
+					id="acqui"
+					src="img/ban-acqui/acquisition.png"
+					alt=""
+				/>
+				<img class="com" id="com" src="img/ban-acqui/com-man.png" alt="" />
+				<img class="seo" id="seo" src="img/ban-acqui/seo.png" alt="" />
+				<img class="sea" id="sea" src="img/ban-acqui/sea.png" alt="" />
+			</div>
+		</div>
+		<script>
+			function cacheimg() {
+				document.getElementById("img-charge-acqui").style.display = "none";
+				document.getElementById("corp").style.display = "flex";
+			}
+
+			setTimeout(cacheimg, 2000);
+
+			function addImageSurvol1(idImg, srcImgOver) {
+				var img = document.getElementById(idImg), // On récupère notre image
+					srcImg = img.src, // On sauvegarde l'url originale de l'image
+					imgOver = new Image(); // On crée un objet Image...
+				imgOver.src = srcImgOver; // ...pour précharger la deuxième image.
+
+				// Reste plus qu'à ajouter les gestionnaire d'évènements :
+				img.onmouseover = function () {
+					this.src = srcImgOver; //changement de l'image entrée souris
+					document.getElementById("imgtexte").innerHTML =
+						"<div id='imgtexteover'><img src='img/ban-acqui/texte-acqui.png' class='imgtexte'/></div>";
+				};
+				img.onmouseout = function () {
+					this.src = srcImg; //changement de l'image sortie souris
+					document.getElementById("imgtexteover").innerHTML =
+						"<div id='imgtexte'><img src='img/ban-acqui/texte-acqui.png' class='imgtexte'/></div>";
+				};
+			}
+
+			function addImageSurvol2(idImg, srcImgOver) {
+				var img = document.getElementById(idImg), // On récupère notre image
+					srcImg = img.src, // On sauvegarde l'url originale de l'image
+					imgOver = new Image(); // On crée un objet Image...
+				imgOver.src = srcImgOver; // ...pour précharger la deuxième image.
+
+				// Reste plus qu'à ajouter les gestionnaire d'évènements :
+				img.onmouseover = function () {
+					this.src = srcImgOver; //changement de l'image entrée souris
+					document.getElementById("imgtexte").innerHTML =
+						"<div id='imgtexteover'><img src='img/ban-acqui/texte-seo.png' class='imgtexte'/></div>";
+				};
+				img.onmouseout = function () {
+					this.src = srcImg; //changement de l'image sortie souris
+					document.getElementById("imgtexteover").innerHTML =
+						"<div id='imgtexte'><img src='img/ban-acqui/texte-acqui.png' class='imgtexte'/></div>";
+				};
+			}
+
+			function addImageSurvol3(idImg, srcImgOver) {
+				var img = document.getElementById(idImg), // On récupère notre image
+					srcImg = img.src, // On sauvegarde l'url originale de l'image
+					imgOver = new Image(); // On crée un objet Image...
+				imgOver.src = srcImgOver; // ...pour précharger la deuxième image.
+
+				// Reste plus qu'à ajouter les gestionnaire d'évènements :
+				img.onmouseover = function () {
+					this.src = srcImgOver; //changement de l'image entrée souris
+					document.getElementById("imgtexte").innerHTML =
+						"<div id='imgtexteover'><img src='img/ban-acqui/texte-com-man.png' class='imgtexte'/></div>";
+				};
+				img.onmouseout = function () {
+					this.src = srcImg; //changement de l'image sortie souris
+					document.getElementById("imgtexteover").innerHTML =
+						"<div id='imgtexte'><img src='img/ban-acqui/texte-acqui.png' class='imgtexte'/></div>";
+				};
+			}
+
+			function addImageSurvol4(idImg, srcImgOver) {
+				var img = document.getElementById(idImg), // On récupère notre image
+					srcImg = img.src, // On sauvegarde l'url originale de l'image
+					imgOver = new Image(); // On crée un objet Image...
+				imgOver.src = srcImgOver; // ...pour précharger la deuxième image.
+
+				// Reste plus qu'à ajouter les gestionnaire d'évènements :
+				img.onmouseover = function () {
+					this.src = srcImgOver; //changement de l'image entrée souris
+					document.getElementById("imgtexte").innerHTML =
+						"<div id='imgtexteover'><img src='img/ban-acqui/texte-sea.png' class='imgtexte'/></div>";
+				};
+				img.onmouseout = function () {
+					this.src = srcImg; //changement de l'image sortie souris
+					document.getElementById("imgtexteover").innerHTML =
+						"<div id='imgtexte'><img src='img/ban-acqui/texte-acqui.png' class='imgtexte'/></div>";
+				};
+			}
+
+			addImageSurvol1("acqui", "img/ban-acqui/acquisition-n&b.png");
+
+			addImageSurvol2("seo", "img/ban-acqui/seo-n&b.png");
+
+			addImageSurvol3("com", "img/ban-acqui/com-man-n&b.png");
+
+			addImageSurvol4("sea", "img/ban-acqui/sea-n&b.png");
+		</script>
 	</body>
 </html>
