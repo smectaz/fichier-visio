@@ -144,7 +144,8 @@
 
 /*fond photo*/
 .photo {
-	background-image: url(img/photo-accueil/Home-Page.jpg);
+	background-image: url(img/photo-accueil/Home-Page.png);
+	background-size: auto;
 }
 /*positionnement du logo*/
 .logo {
@@ -196,7 +197,7 @@
 	padding-bottom: 50px;
 }
 
-/*css du texte principal on reutilise la meme animation que la ban accueil*/
+/*css du texte principal*/
 .coltitre {
 	color: #facb61;
 	font-size: 30px;
@@ -211,7 +212,7 @@
 	text-transform: uppercase;
 }
 
-/*css ban acquisition*/
+/*css ban acquisition on reutilise la meme animation que la ban accueil*/
 .corp {
 	display: none;
 	justify-content: space-between;
